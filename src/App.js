@@ -36,7 +36,7 @@ function App() {
   function send()
   {
     setstatus(true)
-    axios.post("https://bulk-mail-backend-xi.vercel.app/",{msg:msg, emailList:emailList}).then(function(data)
+    axios.post("http://localhost:5000/mail",{msg:msg, emailList:emailList}).then(function(data)
     {
       if(data.data === true)
       {
